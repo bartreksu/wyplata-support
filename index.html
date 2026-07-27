@@ -1,139 +1,223 @@
-<!DOCTYPE html>
-<html lang="pl">
+<!doctype html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Wypłata — Pomoc i prywatność</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Talvo — Privacy Policy</title>
 <style>
   :root {
-    --bg: #f2f2f7;
-    --card: #ffffff;
-    --text: #1c1c1e;
-    --muted: #6b6b70;
-    --accent: #5856d6;
-    --border: #e2e2e8;
+    --bg: #f2f2f7; --card: #ffffff; --text: #1c1c1e; --muted: #6b6b70;
+    --accent: #5856d6; --border: #e4e4ea;
   }
   @media (prefers-color-scheme: dark) {
-    :root {
-      --bg: #000000;
-      --card: #1c1c1e;
-      --text: #f2f2f7;
-      --muted: #9a9a9f;
-      --accent: #7d7bf0;
-      --border: #2c2c2e;
-    }
+    :root { --bg:#000; --card:#1c1c1e; --text:#f2f2f7; --muted:#98989f; --accent:#7d7bff; --border:#2c2c2e; }
   }
   * { box-sizing: border-box; }
   body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    background: var(--bg);
-    color: var(--text);
-    line-height: 1.6;
-    -webkit-font-smoothing: antialiased;
+    margin: 0; background: var(--bg); color: var(--text);
+    font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    padding: 24px 16px 64px;
   }
-  .wrap { max-width: 720px; margin: 0 auto; padding: 32px 20px 64px; }
-  header { text-align: center; padding: 24px 0 12px; }
-  .logo {
-    width: 84px; height: 84px; border-radius: 20px; margin: 0 auto 14px;
-    display: block; object-fit: cover;
-    box-shadow: 0 10px 24px rgba(88,86,214,0.35);
+  .wrap { max-width: 760px; margin: 0 auto; }
+  header { text-align: center; margin-bottom: 24px; }
+  .brand { font-size: 34px; font-weight: 800; letter-spacing: -0.5px; }
+  .brand .dot { color: var(--accent); }
+  .sub { color: var(--muted); margin-top: 4px; }
+  .langs { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin: 20px 0 24px; }
+  .lang {
+    border: 1px solid var(--border); background: var(--card); color: var(--text);
+    padding: 8px 14px; border-radius: 999px; font-size: 15px; cursor: pointer; transition: .15s;
   }
-  h1 { font-size: 30px; margin: 0 0 4px; letter-spacing: -0.02em; }
-  .sub { color: var(--muted); margin: 0; }
-  .card {
-    background: var(--card); border: 1px solid var(--border);
-    border-radius: 18px; padding: 22px 22px; margin: 18px 0;
+  .lang:hover { border-color: var(--accent); }
+  .lang.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+  .policy {
+    display: none; background: var(--card); border: 1px solid var(--border);
+    border-radius: 18px; padding: 22px 24px; white-space: pre-wrap; word-wrap: break-word;
   }
-  h2 { font-size: 20px; margin: 4px 0 12px; letter-spacing: -0.01em; }
-  h3 { font-size: 16px; margin: 18px 0 4px; }
-  p { margin: 8px 0; }
-  a { color: var(--accent); text-decoration: none; }
-  a:hover { text-decoration: underline; }
-  .btn {
-    display: inline-block; background: var(--accent); color: #fff;
-    padding: 12px 20px; border-radius: 12px; font-weight: 600; margin-top: 6px;
-  }
-  .btn:hover { text-decoration: none; opacity: 0.9; }
-  ul { padding-left: 20px; margin: 8px 0; }
-  li { margin: 4px 0; }
-  .muted { color: var(--muted); font-size: 14px; }
-  footer { text-align: center; color: var(--muted); font-size: 14px; margin-top: 28px; }
-  code { background: var(--border); padding: 1px 6px; border-radius: 6px; font-size: 90%; }
+  .policy.active { display: block; }
+  footer { text-align: center; color: var(--muted); font-size: 13px; margin-top: 28px; }
+  footer a { color: var(--accent); }
 </style>
 </head>
 <body>
-<div class="wrap">
+  <div class="wrap">
+    <header>
+      <div class="brand">Talvo<span class="dot">.</span></div>
+      <div class="sub">Privacy Policy · Polityka prywatności</div>
+    </header>
+    <nav class="langs">
+      <button class="lang" data-lang="pl" onclick="show('pl')">Polski</button>
+<button class="lang" data-lang="en" onclick="show('en')">English</button>
+<button class="lang" data-lang="de" onclick="show('de')">Deutsch</button>
+<button class="lang" data-lang="it" onclick="show('it')">Italiano</button>
+<button class="lang" data-lang="es" onclick="show('es')">Español</button>
+<button class="lang" data-lang="fr" onclick="show('fr')">Français</button>
+    </nav>
+    <article id="lang-pl" class="policy" lang="pl">Polityka prywatności — Talvo
 
-  <header>
-    <img class="logo" src="icon.png" alt="Ikona aplikacji Wypłata" width="84" height="84">
-    <h1>Wypłata</h1>
-    <p class="sub">Czas pracy, grafik i wypłata — pomoc i prywatność</p>
-  </header>
+Twoja prywatność jest dla nas ważna. Aplikacja została zaprojektowana tak, aby działać w pełni na Twoim urządzeniu.
 
-  <div class="card">
-    <h2>Wsparcie i kontakt</h2>
-    <p>Masz pytanie, znalazłeś błąd albo masz pomysł na nową funkcję? Napisz — chętnie pomogę i rozwijam aplikację.</p>
-    <p><a class="btn" href="mailto:bartek.sm90@gmail.com">Napisz do nas</a></p>
-    <p class="muted">E-mail: <a href="mailto:bartek.sm90@gmail.com">bartek.sm90@gmail.com</a><br>Odpowiadam zwykle w ciągu kilku dni roboczych.</p>
+JAKIE DANE PRZETWARZAMY
+• Dane o czasie pracy, stawkach, premiach, napiwkach, urlopach i grafiku, które sam wprowadzasz.
+• Dane są przechowywane lokalnie na Twoim urządzeniu, a jeśli włączysz synchronizację — w Twoim prywatnym koncie iCloud (Apple).
+
+CZEGO NIE ROBIMY
+• Nie zbieramy, nie sprzedajemy ani nie udostępniamy Twoich danych osobom trzecim.
+• Nie wymagamy zakładania konta ani logowania.
+• Nie używamy reklam ani narzędzi śledzących.
+• Nie wysyłamy Twoich danych na nasze serwery — nie posiadamy serwerów przetwarzających Twoje dane.
+
+iCLOUD
+• Po włączeniu synchronizacji dane są przechowywane w Twoim koncie iCloud i podlegają polityce prywatności Apple. Synchronizację możesz wyłączyć w ustawieniach aplikacji.
+
+USUWANIE DANYCH
+• W każdej chwili możesz usunąć wszystkie dane: Ustawienia → „Usuń moje dane&quot;. Spowoduje to wymazanie danych z urządzenia oraz z iCloud (jeśli był używany).
+
+AUTOR I KONTAKT
+• Autor: Bartosz Smut
+• W sprawach prywatności: bartek.sm90@gmail.com
+
+Data ostatniej aktualizacji: 02.07.2026</article>
+<article id="lang-en" class="policy" lang="en">Privacy Policy — Talvo
+
+Your privacy matters to us. The app is designed to run entirely on your device.
+
+WHAT DATA WE PROCESS
+• Data about working time, rates, bonuses, tips, leave and schedule that you enter yourself.
+• Data is stored locally on your device, and if you enable sync — in your private iCloud account (Apple).
+
+WHAT WE DON&#x27;T DO
+• We do not collect, sell or share your data with third parties.
+• We do not require creating an account or logging in.
+• We do not use ads or tracking tools.
+• We do not send your data to our servers — we have no servers that process your data.
+
+iCLOUD
+• When sync is enabled, data is stored in your iCloud account and is subject to Apple&#x27;s privacy policy. You can turn sync off in the app settings.
+
+DELETING DATA
+• You can delete all data at any time: Settings → &quot;Delete my data&quot;. This erases the data from the device and from iCloud (if it was used).
+
+AUTHOR AND CONTACT
+• Author: Bartosz Smut
+• For privacy matters: bartek.sm90@gmail.com
+
+Last updated: 02.07.2026</article>
+<article id="lang-de" class="policy" lang="de">Datenschutzerklärung — Talvo
+
+Deine Privatsphäre ist uns wichtig. Die App ist so konzipiert, dass sie vollständig auf deinem Gerät läuft.
+
+WELCHE DATEN WIR VERARBEITEN
+• Daten zu Arbeitszeit, Sätzen, Boni, Trinkgeld, Urlaub und Dienstplan, die du selbst eingibst.
+• Die Daten werden lokal auf deinem Gerät gespeichert und, wenn du die Synchronisierung aktivierst — in deinem privaten iCloud-Konto (Apple).
+
+WAS WIR NICHT TUN
+• Wir sammeln, verkaufen oder teilen deine Daten nicht mit Dritten.
+• Wir verlangen keine Kontoerstellung oder Anmeldung.
+• Wir verwenden keine Werbung oder Tracking-Tools.
+• Wir senden deine Daten nicht an unsere Server — wir haben keine Server, die deine Daten verarbeiten.
+
+iCLOUD
+• Wenn die Synchronisierung aktiviert ist, werden die Daten in deinem iCloud-Konto gespeichert und unterliegen der Datenschutzrichtlinie von Apple. Du kannst die Synchronisierung in den App-Einstellungen deaktivieren.
+
+DATEN LÖSCHEN
+• Du kannst jederzeit alle Daten löschen: Einstellungen → „Meine Daten löschen&quot;. Dadurch werden die Daten vom Gerät und aus iCloud (falls verwendet) entfernt.
+
+AUTOR UND KONTAKT
+• Autor: Bartosz Smut
+• Für Datenschutzfragen: bartek.sm90@gmail.com
+
+Zuletzt aktualisiert: 02.07.2026</article>
+<article id="lang-it" class="policy" lang="it">Informativa sulla privacy — Talvo
+
+La tua privacy è importante per noi. L&#x27;app è progettata per funzionare interamente sul tuo dispositivo.
+
+QUALI DATI TRATTIAMO
+• Dati su orario di lavoro, tariffe, bonus, mance, ferie e turni che inserisci tu stesso.
+• I dati sono salvati localmente sul tuo dispositivo e, se attivi la sincronizzazione — nel tuo account iCloud privato (Apple).
+
+COSA NON FACCIAMO
+• Non raccogliamo, vendiamo né condividiamo i tuoi dati con terzi.
+• Non richiediamo la creazione di un account né l&#x27;accesso.
+• Non usiamo pubblicità né strumenti di tracciamento.
+• Non inviamo i tuoi dati ai nostri server — non abbiamo server che trattano i tuoi dati.
+
+iCLOUD
+• Quando la sincronizzazione è attiva, i dati sono salvati nel tuo account iCloud e sono soggetti all&#x27;informativa sulla privacy di Apple. Puoi disattivare la sincronizzazione nelle impostazioni dell&#x27;app.
+
+ELIMINAZIONE DEI DATI
+• Puoi eliminare tutti i dati in qualsiasi momento: Impostazioni → &quot;Elimina i miei dati&quot;. Questo cancella i dati dal dispositivo e da iCloud (se usato).
+
+AUTORE E CONTATTO
+• Autore: Bartosz Smut
+• Per questioni di privacy: bartek.sm90@gmail.com
+
+Ultimo aggiornamento: 02.07.2026</article>
+<article id="lang-es" class="policy" lang="es">Política de privacidad — Talvo
+
+Tu privacidad nos importa. La app está diseñada para funcionar por completo en tu dispositivo.
+
+QUÉ DATOS TRATAMOS
+• Datos sobre tiempo de trabajo, tarifas, bonos, propinas, vacaciones y horario que introduces tú mismo.
+• Los datos se guardan localmente en tu dispositivo y, si activas la sincronización — en tu cuenta privada de iCloud (Apple).
+
+QUÉ NO HACEMOS
+• No recopilamos, vendemos ni compartimos tus datos con terceros.
+• No requerimos crear una cuenta ni iniciar sesión.
+• No usamos anuncios ni herramientas de seguimiento.
+• No enviamos tus datos a nuestros servidores — no tenemos servidores que traten tus datos.
+
+iCLOUD
+• Cuando la sincronización está activada, los datos se guardan en tu cuenta de iCloud y están sujetos a la política de privacidad de Apple. Puedes desactivar la sincronización en los ajustes de la app.
+
+ELIMINACIÓN DE DATOS
+• Puedes eliminar todos los datos en cualquier momento: Ajustes → &quot;Eliminar mis datos&quot;. Esto borra los datos del dispositivo y de iCloud (si se usó).
+
+AUTOR Y CONTACTO
+• Autor: Bartosz Smut
+• Para asuntos de privacidad: bartek.sm90@gmail.com
+
+Última actualización: 02.07.2026</article>
+<article id="lang-fr" class="policy" lang="fr">Politique de confidentialité — Talvo
+
+Votre vie privée compte pour nous. L&#x27;app est conçue pour fonctionner entièrement sur votre appareil.
+
+QUELLES DONNÉES NOUS TRAITONS
+• Des données sur le temps de travail, les taux, les primes, les pourboires, les congés et le planning que vous saisissez vous-même.
+• Les données sont stockées localement sur votre appareil et, si vous activez la synchronisation — dans votre compte iCloud privé (Apple).
+
+CE QUE NOUS NE FAISONS PAS
+• Nous ne collectons, ne vendons ni ne partageons vos données avec des tiers.
+• Nous n&#x27;exigeons pas de création de compte ni de connexion.
+• Nous n&#x27;utilisons pas de publicité ni d&#x27;outils de suivi.
+• Nous n&#x27;envoyons pas vos données à nos serveurs — nous n&#x27;avons pas de serveurs qui traitent vos données.
+
+iCLOUD
+• Lorsque la synchronisation est activée, les données sont stockées dans votre compte iCloud et sont soumises à la politique de confidentialité d&#x27;Apple. Vous pouvez désactiver la synchronisation dans les réglages de l&#x27;app.
+
+SUPPRESSION DES DONNÉES
+• Vous pouvez supprimer toutes les données à tout moment : Réglages → « Supprimer mes données ». Cela efface les données de l&#x27;appareil et d&#x27;iCloud (s&#x27;il a été utilisé).
+
+AUTEUR ET CONTACT
+• Auteur : Bartosz Smut
+• Pour les questions de confidentialité : bartek.sm90@gmail.com
+
+Dernière mise à jour : 02.07.2026</article>
+    <footer>Talvo — work hours &amp; pay tracker · <a href="mailto:bartek.sm90@gmail.com">bartek.sm90@gmail.com</a></footer>
   </div>
-
-  <div class="card">
-    <h2>Najczęstsze pytania</h2>
-
-    <h3>Jak liczona jest kwota „na rękę” (netto)?</h3>
-    <p>Netto jest <strong>szacowane</strong> według uproszczonych polskich zasad (ZUS, składka zdrowotna, PIT, koszty uzyskania, ulga dla młodych do 26 r.ż.) i zależy od wybranej formy zatrudnienia. Rzeczywiste potrącenia mogą się różnić — kwoty mają charakter pomocniczy.</p>
-
-    <h3>Gdzie przechowywane są moje dane?</h3>
-    <p>Wszystkie dane są <strong>na Twoim urządzeniu</strong>. Jeśli włączysz synchronizację iCloud, są dodatkowo przechowywane w Twoim prywatnym koncie iCloud (Apple). Nie mamy serwerów przetwarzających Twoje dane.</p>
-
-    <h3>Czy muszę zakładać konto lub się logować?</h3>
-    <p>Nie. Aplikacja działa bez konta i bez logowania.</p>
-
-    <h3>Jak odzyskać dane po ponownej instalacji?</h3>
-    <p>Włącz <strong>Synchronizację iCloud</strong> w ustawieniach. Po ponownej instalacji (na tym samym koncie iCloud) aplikacja przy pierwszym uruchomieniu zaproponuje przywrócenie kopii z iCloud.</p>
-
-    <h3>Jak usunąć wszystkie dane?</h3>
-    <p>Ustawienia → „Usuń moje dane”. Operacja kasuje dane z urządzenia oraz z iCloud (jeśli był używany) i jest nieodwracalna.</p>
-
-    <h3>Czy aplikacja ma reklamy lub śledzenie?</h3>
-    <p>Nie. Brak reklam i narzędzi śledzących.</p>
-  </div>
-
-  <div class="card" id="prywatnosc">
-    <h2>Polityka prywatności</h2>
-    <p>Twoja prywatność jest dla nas ważna. Aplikacja została zaprojektowana tak, aby działać w pełni na Twoim urządzeniu.</p>
-
-    <h3>Jakie dane przetwarzamy</h3>
-    <ul>
-      <li>Dane o czasie pracy, stawkach, premiach, napiwkach, urlopach i grafiku, które sam wprowadzasz.</li>
-      <li>Dane są przechowywane lokalnie na Twoim urządzeniu, a jeśli włączysz synchronizację — w Twoim prywatnym koncie iCloud (Apple).</li>
-    </ul>
-
-    <h3>Czego nie robimy</h3>
-    <ul>
-      <li>Nie zbieramy, nie sprzedajemy ani nie udostępniamy Twoich danych osobom trzecim.</li>
-      <li>Nie wymagamy zakładania konta ani logowania.</li>
-      <li>Nie używamy reklam ani narzędzi śledzących.</li>
-      <li>Nie wysyłamy Twoich danych na nasze serwery — nie posiadamy serwerów przetwarzających Twoje dane.</li>
-    </ul>
-
-    <h3>iCloud</h3>
-    <p>Po włączeniu synchronizacji dane są przechowywane w Twoim koncie iCloud i podlegają polityce prywatności Apple. Synchronizację możesz wyłączyć w ustawieniach aplikacji.</p>
-
-    <h3>Usuwanie danych</h3>
-    <p>W każdej chwili możesz usunąć wszystkie dane: Ustawienia → „Usuń moje dane”. Spowoduje to wymazanie danych z urządzenia oraz z iCloud (jeśli był używany).</p>
-
-    <h3>Autor i kontakt</h3>
-    <p>Autor: Bartosz Smut<br>W sprawach prywatności: <a href="mailto:bartek.sm90@gmail.com">bartek.sm90@gmail.com</a></p>
-
-    <p class="muted">Data ostatniej aktualizacji: 05.07.2026</p>
-  </div>
-
-  <footer>
-    © 2026 Bartosz Smut · Wypłata
-  </footer>
-
-</div>
+<script>
+  function show(code) {
+    document.querySelectorAll('.policy').forEach(function(el) { el.classList.toggle('active', el.id === 'lang-' + code); });
+    document.querySelectorAll('.lang').forEach(function(b) { b.classList.toggle('active', b.dataset.lang === code); });
+    try { history.replaceState(null, '', '#' + code); } catch (e) {}
+  }
+  var supported = ['pl','en','de','it','es','fr'];
+  var initial = (location.hash || '').replace('#','');
+  if (supported.indexOf(initial) < 0) {
+    var nav = (navigator.language || 'en').slice(0,2).toLowerCase();
+    initial = supported.indexOf(nav) >= 0 ? nav : 'en';
+  }
+  show(initial);
+</script>
 </body>
 </html>
