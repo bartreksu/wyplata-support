@@ -1,223 +1,381 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Talvo — Privacy Policy</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Talvo — Support & Privacy</title>
 <style>
-  :root {
-    --bg: #f2f2f7; --card: #ffffff; --text: #1c1c1e; --muted: #6b6b70;
-    --accent: #5856d6; --border: #e4e4ea;
-  }
+  :root { --bg:#f2f2f7; --card:#fff; --text:#1c1c1e; --muted:#6b6b70; --accent:#5856d6; --border:#e2e2e8; }
   @media (prefers-color-scheme: dark) {
-    :root { --bg:#000; --card:#1c1c1e; --text:#f2f2f7; --muted:#98989f; --accent:#7d7bff; --border:#2c2c2e; }
+    :root { --bg:#000; --card:#1c1c1e; --text:#f2f2f7; --muted:#9a9a9f; --accent:#7d7bf0; --border:#2c2c2e; }
   }
   * { box-sizing: border-box; }
-  body {
-    margin: 0; background: var(--bg); color: var(--text);
-    font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    padding: 24px 16px 64px;
-  }
-  .wrap { max-width: 760px; margin: 0 auto; }
-  header { text-align: center; margin-bottom: 24px; }
-  .logo { width: 84px; height: 84px; border-radius: 20px; margin: 0 auto 14px; display: block;
-    object-fit: cover; box-shadow: 0 10px 24px rgba(88,86,214,0.35); }
-  .brand { font-size: 34px; font-weight: 800; letter-spacing: -0.5px; }
-  .brand .dot { color: var(--accent); }
-  .sub { color: var(--muted); margin-top: 4px; }
-  .langs { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin: 20px 0 24px; }
-  .lang {
-    border: 1px solid var(--border); background: var(--card); color: var(--text);
-    padding: 8px 14px; border-radius: 999px; font-size: 15px; cursor: pointer; transition: .15s;
-  }
-  .lang:hover { border-color: var(--accent); }
-  .lang.active { background: var(--accent); color: #fff; border-color: var(--accent); }
-  .policy {
-    display: none; background: var(--card); border: 1px solid var(--border);
-    border-radius: 18px; padding: 22px 24px; white-space: pre-wrap; word-wrap: break-word;
-  }
-  .policy.active { display: block; }
-  footer { text-align: center; color: var(--muted); font-size: 13px; margin-top: 28px; }
-  footer a { color: var(--accent); }
+  body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    background:var(--bg); color:var(--text); line-height:1.6; -webkit-font-smoothing:antialiased; }
+  .wrap { max-width:720px; margin:0 auto; padding:32px 20px 64px; }
+  header { text-align:center; padding:24px 0 12px; }
+  .logo { width:84px; height:84px; border-radius:20px; margin:0 auto 14px; display:block; object-fit:cover;
+    box-shadow:0 10px 24px rgba(88,86,214,0.35); }
+  h1 { font-size:30px; margin:0 0 4px; letter-spacing:-0.02em; }
+  .sub { color:var(--muted); margin:0; }
+  .langs { display:flex; flex-wrap:wrap; gap:8px; justify-content:center; margin:18px 0 6px; }
+  .lang { border:1px solid var(--border); background:var(--card); color:var(--text); padding:7px 14px;
+    border-radius:999px; font-size:15px; cursor:pointer; transition:.15s; }
+  .lang:hover { border-color:var(--accent); }
+  .lang.active { background:var(--accent); color:#fff; border-color:var(--accent); }
+  .content { display:none; }
+  .content.active { display:block; }
+  .card { background:var(--card); border:1px solid var(--border); border-radius:18px; padding:22px; margin:18px 0; }
+  h2 { font-size:20px; margin:4px 0 12px; letter-spacing:-0.01em; }
+  h3 { font-size:16px; margin:18px 0 4px; }
+  p { margin:8px 0; }
+  a { color:var(--accent); text-decoration:none; }
+  a:hover { text-decoration:underline; }
+  .btn { display:inline-block; background:var(--accent); color:#fff; padding:12px 20px; border-radius:12px;
+    font-weight:600; margin-top:6px; }
+  .btn:hover { text-decoration:none; opacity:.9; }
+  ul { padding-left:20px; margin:8px 0; }
+  li { margin:4px 0; }
+  .muted { color:var(--muted); font-size:14px; }
+  footer { text-align:center; color:var(--muted); font-size:14px; margin-top:28px; }
 </style>
 </head>
 <body>
-  <div class="wrap">
-    <header>
-      <img class="logo" src="icon.png" alt="Talvo app icon" width="84" height="84">
-      <div class="brand">Talvo<span class="dot">.</span></div>
-      <div class="sub">Privacy Policy · Polityka prywatności</div>
-    </header>
-    <nav class="langs">
-      <button class="lang" data-lang="pl" onclick="show('pl')">Polski</button>
-<button class="lang" data-lang="en" onclick="show('en')">English</button>
-<button class="lang" data-lang="de" onclick="show('de')">Deutsch</button>
-<button class="lang" data-lang="it" onclick="show('it')">Italiano</button>
-<button class="lang" data-lang="es" onclick="show('es')">Español</button>
-<button class="lang" data-lang="fr" onclick="show('fr')">Français</button>
-    </nav>
-    <article id="lang-pl" class="policy" lang="pl">Polityka prywatności — Talvo
+<div class="wrap">
+  <header>
+    <img class="logo" src="icon.png" alt="Talvo app icon" width="84" height="84">
+    <h1>Talvo</h1>
+    <p class="sub" id="tagline"></p>
+  </header>
+  <nav class="langs">
+    <button class="lang" data-lang="pl" onclick="show('pl')">Polski</button>
+    <button class="lang" data-lang="en" onclick="show('en')">English</button>
+    <button class="lang" data-lang="de" onclick="show('de')">Deutsch</button>
+    <button class="lang" data-lang="it" onclick="show('it')">Italiano</button>
+    <button class="lang" data-lang="es" onclick="show('es')">Español</button>
+    <button class="lang" data-lang="fr" onclick="show('fr')">Français</button>
+  </nav>
+  <section id="lang-pl" class="content" lang="pl">
+    <div class="card">
+      <h2>Wsparcie i kontakt</h2>
+      <p>Masz pytanie, znalazłeś błąd albo masz pomysł na nową funkcję? Napisz — chętnie pomogę i rozwijam aplikację.</p>
+      <p><a class="btn" href="mailto:bartek.sm90@gmail.com">Napisz do nas</a></p>
+      <p class="muted">E-mail: <a href="mailto:bartek.sm90@gmail.com">bartek.sm90@gmail.com</a><br>Odpowiadam zwykle w ciągu kilku dni roboczych.</p>
+    </div>
 
-Twoja prywatność jest dla nas ważna. Aplikacja została zaprojektowana tak, aby działać w pełni na Twoim urządzeniu.
+    <div class="card">
+      <h2>Najczęstsze pytania</h2>
+      <h3>Jak liczona jest kwota „na rękę” (netto)?</h3>
+      <p>Netto jest <strong>szacowane</strong> według uproszczonych zasad podatkowych wybranego kraju i zależy od formy zatrudnienia. Rzeczywiste potrącenia mogą się różnić — kwoty mają charakter pomocniczy.</p>
+      <h3>Gdzie przechowywane są moje dane?</h3>
+      <p>Wszystkie dane są <strong>na Twoim urządzeniu</strong>. Po włączeniu synchronizacji iCloud są dodatkowo w Twoim prywatnym koncie iCloud (Apple). Nie mamy serwerów przetwarzających Twoje dane.</p>
+      <h3>Czy muszę zakładać konto lub się logować?</h3>
+      <p>Nie. Aplikacja działa bez konta i bez logowania.</p>
+      <h3>Jak odzyskać dane po ponownej instalacji?</h3>
+      <p>Włącz <strong>Synchronizację iCloud</strong> w ustawieniach. Po ponownej instalacji (na tym samym koncie iCloud) aplikacja zaproponuje przywrócenie kopii.</p>
+      <h3>Jak usunąć wszystkie dane?</h3>
+      <p>Ustawienia → „Usuń moje dane”. Operacja kasuje dane z urządzenia oraz z iCloud (jeśli był używany) i jest nieodwracalna.</p>
+      <h3>Czy aplikacja ma reklamy lub śledzenie?</h3>
+      <p>Nie. Brak reklam i narzędzi śledzących.</p>
+    </div>
 
-JAKIE DANE PRZETWARZAMY
-• Dane o czasie pracy, stawkach, premiach, napiwkach, urlopach i grafiku, które sam wprowadzasz.
-• Dane są przechowywane lokalnie na Twoim urządzeniu, a jeśli włączysz synchronizację — w Twoim prywatnym koncie iCloud (Apple).
+    <div class="card">
+      <h2>Polityka prywatności</h2>
+      <p>Twoja prywatność jest dla nas ważna. Aplikacja została zaprojektowana tak, aby działać w pełni na Twoim urządzeniu.</p>
+      <h3>Jakie dane przetwarzamy</h3>
+      <ul>
+        <li>Dane o czasie pracy, stawkach, premiach, napiwkach, urlopach i grafiku, które sam wprowadzasz.</li>
+        <li>Dane są przechowywane lokalnie na Twoim urządzeniu, a jeśli włączysz synchronizację — w Twoim prywatnym koncie iCloud (Apple).</li>
+        <li>Wydarzenia trafiają do systemowego Kalendarza tylko wtedy, gdy sam o to poprosisz. Aplikacja prosi wyłącznie o prawo zapisu i nie odczytuje Twojego kalendarza.</li>
+        <li>Wykazy godzin w PDF powstają na urządzeniu i zostają w aplikacji. Trafiają gdzie indziej tylko wtedy, gdy sam je udostępnisz lub wyślesz.</li>
+        <li>Powiadomienia (koniec pracy, przerwy, przypomnienia o zadaniach, dzień wypłaty) są lokalne i nie opuszczają urządzenia.</li>
+      </ul>
+      <h3>Czego nie robimy</h3>
+      <ul>
+        <li>Nie zbieramy, nie sprzedajemy ani nie udostępniamy Twoich danych osobom trzecim.</li>
+        <li>Nie wymagamy zakładania konta ani logowania.</li>
+        <li>Nie używamy reklam ani narzędzi śledzących.</li>
+        <li>Nie wysyłamy Twoich danych na nasze serwery — nie posiadamy serwerów przetwarzających Twoje dane.</li>
+      </ul>
+      <h3>iCloud</h3>
+      <p>Po włączeniu synchronizacji dane są przechowywane w Twoim koncie iCloud i podlegają polityce prywatności Apple. Synchronizację możesz wyłączyć w ustawieniach aplikacji.</p>
+      <h3>Usuwanie danych</h3>
+      <p>W każdej chwili możesz usunąć wszystkie dane: Ustawienia → „Usuń moje dane”. Spowoduje to wymazanie danych z urządzenia oraz z iCloud (jeśli był używany).</p>
+      <h3>Autor i kontakt</h3>
+      <p>Autor: Bartosz Smut<br>W sprawach prywatności: <a href="mailto:bartek.sm90@gmail.com">bartek.sm90@gmail.com</a></p>
+      <p class="muted">Data ostatniej aktualizacji: 04.10.2026</p>
+    </div>
+  </section>
+  <section id="lang-en" class="content" lang="en">
+    <div class="card">
+      <h2>Support &amp; contact</h2>
+      <p>Have a question, found a bug or an idea for a new feature? Write to us — happy to help and keep improving the app.</p>
+      <p><a class="btn" href="mailto:bartek.sm90@gmail.com">Contact us</a></p>
+      <p class="muted">E-mail: <a href="mailto:bartek.sm90@gmail.com">bartek.sm90@gmail.com</a><br>We usually reply within a few business days.</p>
+    </div>
 
-CZEGO NIE ROBIMY
-• Nie zbieramy, nie sprzedajemy ani nie udostępniamy Twoich danych osobom trzecim.
-• Nie wymagamy zakładania konta ani logowania.
-• Nie używamy reklam ani narzędzi śledzących.
-• Nie wysyłamy Twoich danych na nasze serwery — nie posiadamy serwerów przetwarzających Twoje dane.
+    <div class="card">
+      <h2>Frequently asked questions</h2>
+      <h3>How is the take-home (net) amount calculated?</h3>
+      <p>Net pay is <strong>estimated</strong> using simplified tax rules for the selected country and depends on your employment type. Actual deductions may differ — the amounts are for guidance only.</p>
+      <h3>Where is my data stored?</h3>
+      <p>All data stays <strong>on your device</strong>. If you enable iCloud sync, it is also kept in your private iCloud account (Apple). We have no servers that process your data.</p>
+      <h3>Do I need an account or login?</h3>
+      <p>No. The app works without an account and without logging in.</p>
+      <h3>How do I recover data after reinstalling?</h3>
+      <p>Turn on <strong>iCloud Sync</strong> in settings. After reinstalling (on the same iCloud account) the app will offer to restore your backup.</p>
+      <h3>How do I delete all data?</h3>
+      <p>Settings → “Delete my data”. This erases data from the device and from iCloud (if it was used) and cannot be undone.</p>
+      <h3>Does the app have ads or tracking?</h3>
+      <p>No. No ads and no tracking tools.</p>
+    </div>
 
-iCLOUD
-• Po włączeniu synchronizacji dane są przechowywane w Twoim koncie iCloud i podlegają polityce prywatności Apple. Synchronizację możesz wyłączyć w ustawieniach aplikacji.
+    <div class="card">
+      <h2>Privacy policy</h2>
+      <p>Your privacy matters to us. The app is designed to run entirely on your device.</p>
+      <h3>What data we process</h3>
+      <ul>
+        <li>Data about working time, rates, bonuses, tips, leave and schedule that you enter yourself.</li>
+        <li>Data is stored locally on your device, and if you enable sync — in your private iCloud account (Apple).</li>
+        <li>Events are added to the system Calendar only when you ask for it. The app requests write access only and never reads your calendar.</li>
+        <li>PDF hours statements are created on your device and stay inside the app. They go elsewhere only if you share or send them yourself.</li>
+        <li>Notifications (end of work, breaks, task reminders, payday) are local and never leave your device.</li>
+      </ul>
+      <h3>What we don’t do</h3>
+      <ul>
+        <li>We do not collect, sell or share your data with third parties.</li>
+        <li>We do not require creating an account or logging in.</li>
+        <li>We do not use ads or tracking tools.</li>
+        <li>We do not send your data to our servers — we have no servers that process your data.</li>
+      </ul>
+      <h3>iCloud</h3>
+      <p>When sync is enabled, data is stored in your iCloud account and is subject to Apple’s privacy policy. You can turn sync off in the app settings.</p>
+      <h3>Deleting data</h3>
+      <p>You can delete all data at any time: Settings → “Delete my data”. This erases the data from the device and from iCloud (if it was used).</p>
+      <h3>Author &amp; contact</h3>
+      <p>Author: Bartosz Smut<br>For privacy matters: <a href="mailto:bartek.sm90@gmail.com">bartek.sm90@gmail.com</a></p>
+      <p class="muted">Last updated: 04.10.2026</p>
+    </div>
+  </section>
+  <section id="lang-de" class="content" lang="de">
+    <div class="card">
+      <h2>Support &amp; Kontakt</h2>
+      <p>Hast du eine Frage, einen Fehler gefunden oder eine Idee für eine neue Funktion? Schreib uns — wir helfen gern und entwickeln die App weiter.</p>
+      <p><a class="btn" href="mailto:bartek.sm90@gmail.com">Kontaktiere uns</a></p>
+      <p class="muted">E-mail: <a href="mailto:bartek.sm90@gmail.com">bartek.sm90@gmail.com</a><br>Wir antworten in der Regel innerhalb einiger Werktage.</p>
+    </div>
 
-USUWANIE DANYCH
-• W każdej chwili możesz usunąć wszystkie dane: Ustawienia → „Usuń moje dane&quot;. Spowoduje to wymazanie danych z urządzenia oraz z iCloud (jeśli był używany).
+    <div class="card">
+      <h2>Häufige Fragen</h2>
+      <h3>Wie wird der Nettobetrag berechnet?</h3>
+      <p>Der Nettolohn wird nach vereinfachten Steuerregeln des gewählten Landes <strong>geschätzt</strong> und hängt von der Beschäftigungsart ab. Tatsächliche Abzüge können abweichen — die Beträge dienen nur zur Orientierung.</p>
+      <h3>Wo werden meine Daten gespeichert?</h3>
+      <p>Alle Daten bleiben <strong>auf deinem Gerät</strong>. Wenn du die iCloud-Synchronisierung aktivierst, werden sie zusätzlich in deinem privaten iCloud-Konto (Apple) gespeichert. Wir haben keine Server, die deine Daten verarbeiten.</p>
+      <h3>Brauche ich ein Konto oder eine Anmeldung?</h3>
+      <p>Nein. Die App funktioniert ohne Konto und ohne Anmeldung.</p>
+      <h3>Wie stelle ich Daten nach einer Neuinstallation wieder her?</h3>
+      <p>Aktiviere die <strong>iCloud-Synchronisierung</strong> in den Einstellungen. Nach der Neuinstallation (mit demselben iCloud-Konto) bietet die App die Wiederherstellung an.</p>
+      <h3>Wie lösche ich alle Daten?</h3>
+      <p>Einstellungen → „Meine Daten löschen”. Dies löscht die Daten vom Gerät und aus iCloud (falls verwendet) und ist unwiderruflich.</p>
+      <h3>Hat die App Werbung oder Tracking?</h3>
+      <p>Nein. Keine Werbung und keine Tracking-Tools.</p>
+    </div>
 
-AUTOR I KONTAKT
-• Autor: Bartosz Smut
-• W sprawach prywatności: bartek.sm90@gmail.com
+    <div class="card">
+      <h2>Datenschutzerklärung</h2>
+      <p>Deine Privatsphäre ist uns wichtig. Die App ist so konzipiert, dass sie vollständig auf deinem Gerät läuft.</p>
+      <h3>Welche Daten wir verarbeiten</h3>
+      <ul>
+        <li>Daten zu Arbeitszeit, Sätzen, Boni, Trinkgeld, Urlaub und Dienstplan, die du selbst eingibst.</li>
+        <li>Die Daten werden lokal auf deinem Gerät gespeichert und, wenn du die Synchronisierung aktivierst — in deinem privaten iCloud-Konto (Apple).</li>
+        <li>Termine landen nur im System-Kalender, wenn du es selbst auslöst. Die App fragt ausschließlich Schreibrechte an und liest deinen Kalender nicht.</li>
+        <li>Stundennachweise als PDF entstehen auf deinem Gerät und bleiben in der App. Sie gehen nur dorthin, wohin du sie selbst teilst oder sendest.</li>
+        <li>Mitteilungen (Arbeitsende, Pausen, Aufgaben-Erinnerungen, Zahltag) sind lokal und verlassen dein Gerät nicht.</li>
+      </ul>
+      <h3>Was wir nicht tun</h3>
+      <ul>
+        <li>Wir sammeln, verkaufen oder teilen deine Daten nicht mit Dritten.</li>
+        <li>Wir verlangen keine Kontoerstellung oder Anmeldung.</li>
+        <li>Wir verwenden keine Werbung oder Tracking-Tools.</li>
+        <li>Wir senden deine Daten nicht an unsere Server — wir haben keine Server, die deine Daten verarbeiten.</li>
+      </ul>
+      <h3>iCloud</h3>
+      <p>Wenn die Synchronisierung aktiviert ist, werden die Daten in deinem iCloud-Konto gespeichert und unterliegen der Datenschutzrichtlinie von Apple. Du kannst die Synchronisierung in den App-Einstellungen deaktivieren.</p>
+      <h3>Daten löschen</h3>
+      <p>Du kannst jederzeit alle Daten löschen: Einstellungen → „Meine Daten löschen”. Dadurch werden die Daten vom Gerät und aus iCloud (falls verwendet) entfernt.</p>
+      <h3>Autor &amp; Kontakt</h3>
+      <p>Autor: Bartosz Smut<br>Für Datenschutzfragen: <a href="mailto:bartek.sm90@gmail.com">bartek.sm90@gmail.com</a></p>
+      <p class="muted">Zuletzt aktualisiert: 04.10.2026</p>
+    </div>
+  </section>
+  <section id="lang-it" class="content" lang="it">
+    <div class="card">
+      <h2>Assistenza e contatti</h2>
+      <p>Hai una domanda, hai trovato un bug o hai un’idea per una nuova funzione? Scrivici — siamo felici di aiutare e di migliorare l’app.</p>
+      <p><a class="btn" href="mailto:bartek.sm90@gmail.com">Contattaci</a></p>
+      <p class="muted">E-mail: <a href="mailto:bartek.sm90@gmail.com">bartek.sm90@gmail.com</a><br>Di solito rispondiamo entro pochi giorni lavorativi.</p>
+    </div>
 
-Data ostatniej aktualizacji: 27.07.2026</article>
-<article id="lang-en" class="policy" lang="en">Privacy Policy — Talvo
+    <div class="card">
+      <h2>Domande frequenti</h2>
+      <h3>Come viene calcolato il netto?</h3>
+      <p>Il netto è <strong>stimato</strong> con regole fiscali semplificate del paese scelto e dipende dal tipo di impiego. Le trattenute effettive possono variare — gli importi sono solo indicativi.</p>
+      <h3>Dove sono conservati i miei dati?</h3>
+      <p>Tutti i dati restano <strong>sul tuo dispositivo</strong>. Se attivi la sincronizzazione iCloud, sono conservati anche nel tuo account iCloud privato (Apple). Non abbiamo server che trattano i tuoi dati.</p>
+      <h3>Devo creare un account o accedere?</h3>
+      <p>No. L’app funziona senza account e senza accesso.</p>
+      <h3>Come recupero i dati dopo la reinstallazione?</h3>
+      <p>Attiva la <strong>Sincronizzazione iCloud</strong> nelle impostazioni. Dopo la reinstallazione (con lo stesso account iCloud) l’app proporrà di ripristinare il backup.</p>
+      <h3>Come elimino tutti i dati?</h3>
+      <p>Impostazioni → “Elimina i miei dati”. Questo cancella i dati dal dispositivo e da iCloud (se usato) ed è irreversibile.</p>
+      <h3>L’app ha pubblicità o tracciamento?</h3>
+      <p>No. Nessuna pubblicità e nessuno strumento di tracciamento.</p>
+    </div>
 
-Your privacy matters to us. The app is designed to run entirely on your device.
+    <div class="card">
+      <h2>Informativa sulla privacy</h2>
+      <p>La tua privacy è importante per noi. L’app è progettata per funzionare interamente sul tuo dispositivo.</p>
+      <h3>Quali dati trattiamo</h3>
+      <ul>
+        <li>Dati su orario di lavoro, tariffe, bonus, mance, ferie e turni che inserisci tu stesso.</li>
+        <li>I dati sono salvati localmente sul tuo dispositivo e, se attivi la sincronizzazione — nel tuo account iCloud privato (Apple).</li>
+        <li>Gli eventi finiscono nel Calendario di sistema solo quando lo chiedi tu. L&#x27;app richiede soltanto il permesso di scrittura e non legge il tuo calendario.</li>
+        <li>I registri ore in PDF vengono creati sul dispositivo e restano nell&#x27;app. Vanno altrove solo se sei tu a condividerli o inviarli.</li>
+        <li>Le notifiche (fine lavoro, pause, promemoria delle attività, giorno di paga) sono locali e non escono dal dispositivo.</li>
+      </ul>
+      <h3>Cosa non facciamo</h3>
+      <ul>
+        <li>Non raccogliamo, vendiamo né condividiamo i tuoi dati con terzi.</li>
+        <li>Non richiediamo la creazione di un account né l’accesso.</li>
+        <li>Non usiamo pubblicità né strumenti di tracciamento.</li>
+        <li>Non inviamo i tuoi dati ai nostri server — non abbiamo server che trattano i tuoi dati.</li>
+      </ul>
+      <h3>iCloud</h3>
+      <p>Quando la sincronizzazione è attiva, i dati sono salvati nel tuo account iCloud e sono soggetti all’informativa sulla privacy di Apple. Puoi disattivare la sincronizzazione nelle impostazioni dell’app.</p>
+      <h3>Eliminazione dei dati</h3>
+      <p>Puoi eliminare tutti i dati in qualsiasi momento: Impostazioni → “Elimina i miei dati”. Questo cancella i dati dal dispositivo e da iCloud (se usato).</p>
+      <h3>Autore e contatti</h3>
+      <p>Autore: Bartosz Smut<br>Per questioni di privacy: <a href="mailto:bartek.sm90@gmail.com">bartek.sm90@gmail.com</a></p>
+      <p class="muted">Ultimo aggiornamento: 04.10.2026</p>
+    </div>
+  </section>
+  <section id="lang-es" class="content" lang="es">
+    <div class="card">
+      <h2>Soporte y contacto</h2>
+      <p>¿Tienes una pregunta, encontraste un error o una idea para una nueva función? Escríbenos — con gusto ayudamos y seguimos mejorando la app.</p>
+      <p><a class="btn" href="mailto:bartek.sm90@gmail.com">Contáctanos</a></p>
+      <p class="muted">E-mail: <a href="mailto:bartek.sm90@gmail.com">bartek.sm90@gmail.com</a><br>Solemos responder en pocos días laborables.</p>
+    </div>
 
-WHAT DATA WE PROCESS
-• Data about working time, rates, bonuses, tips, leave and schedule that you enter yourself.
-• Data is stored locally on your device, and if you enable sync — in your private iCloud account (Apple).
+    <div class="card">
+      <h2>Preguntas frecuentes</h2>
+      <h3>¿Cómo se calcula el importe neto?</h3>
+      <p>El neto es <strong>estimado</strong> con reglas fiscales simplificadas del país elegido y depende del tipo de empleo. Las deducciones reales pueden variar — los importes son orientativos.</p>
+      <h3>¿Dónde se guardan mis datos?</h3>
+      <p>Todos los datos quedan <strong>en tu dispositivo</strong>. Si activas la sincronización iCloud, también se guardan en tu cuenta privada de iCloud (Apple). No tenemos servidores que traten tus datos.</p>
+      <h3>¿Necesito una cuenta o iniciar sesión?</h3>
+      <p>No. La app funciona sin cuenta y sin inicio de sesión.</p>
+      <h3>¿Cómo recupero los datos tras reinstalar?</h3>
+      <p>Activa la <strong>Sincronización iCloud</strong> en los ajustes. Tras reinstalar (con la misma cuenta de iCloud) la app ofrecerá restaurar la copia.</p>
+      <h3>¿Cómo elimino todos los datos?</h3>
+      <p>Ajustes → “Eliminar mis datos”. Esto borra los datos del dispositivo y de iCloud (si se usó) y es irreversible.</p>
+      <h3>¿La app tiene anuncios o rastreo?</h3>
+      <p>No. Sin anuncios y sin herramientas de rastreo.</p>
+    </div>
 
-WHAT WE DON&#x27;T DO
-• We do not collect, sell or share your data with third parties.
-• We do not require creating an account or logging in.
-• We do not use ads or tracking tools.
-• We do not send your data to our servers — we have no servers that process your data.
+    <div class="card">
+      <h2>Política de privacidad</h2>
+      <p>Tu privacidad nos importa. La app está diseñada para funcionar por completo en tu dispositivo.</p>
+      <h3>Qué datos tratamos</h3>
+      <ul>
+        <li>Datos sobre tiempo de trabajo, tarifas, bonos, propinas, vacaciones y horario que introduces tú mismo.</li>
+        <li>Los datos se guardan localmente en tu dispositivo y, si activas la sincronización — en tu cuenta privada de iCloud (Apple).</li>
+        <li>Los eventos van al Calendario del sistema solo cuando tú lo pides. La app solicita únicamente permiso de escritura y no lee tu calendario.</li>
+        <li>Los registros de horas en PDF se crean en el dispositivo y se quedan en la app. Salen de ahí solo si tú los compartes o los envías.</li>
+        <li>Las notificaciones (fin del trabajo, descansos, recordatorios de tareas, día de cobro) son locales y no salen del dispositivo.</li>
+      </ul>
+      <h3>Qué no hacemos</h3>
+      <ul>
+        <li>No recopilamos, vendemos ni compartimos tus datos con terceros.</li>
+        <li>No requerimos crear una cuenta ni iniciar sesión.</li>
+        <li>No usamos anuncios ni herramientas de rastreo.</li>
+        <li>No enviamos tus datos a nuestros servidores — no tenemos servidores que traten tus datos.</li>
+      </ul>
+      <h3>iCloud</h3>
+      <p>Cuando la sincronización está activada, los datos se guardan en tu cuenta de iCloud y están sujetos a la política de privacidad de Apple. Puedes desactivar la sincronización en los ajustes de la app.</p>
+      <h3>Eliminación de datos</h3>
+      <p>Puedes eliminar todos los datos en cualquier momento: Ajustes → “Eliminar mis datos”. Esto borra los datos del dispositivo y de iCloud (si se usó).</p>
+      <h3>Autor y contacto</h3>
+      <p>Autor: Bartosz Smut<br>Para asuntos de privacidad: <a href="mailto:bartek.sm90@gmail.com">bartek.sm90@gmail.com</a></p>
+      <p class="muted">Última actualización: 04.10.2026</p>
+    </div>
+  </section>
+  <section id="lang-fr" class="content" lang="fr">
+    <div class="card">
+      <h2>Assistance &amp; contact</h2>
+      <p>Une question, un bug ou une idée de fonctionnalité ? Écrivez-nous — nous aidons volontiers et faisons évoluer l’app.</p>
+      <p><a class="btn" href="mailto:bartek.sm90@gmail.com">Contactez-nous</a></p>
+      <p class="muted">E-mail: <a href="mailto:bartek.sm90@gmail.com">bartek.sm90@gmail.com</a><br>Nous répondons généralement sous quelques jours ouvrés.</p>
+    </div>
 
-iCLOUD
-• When sync is enabled, data is stored in your iCloud account and is subject to Apple&#x27;s privacy policy. You can turn sync off in the app settings.
+    <div class="card">
+      <h2>Questions fréquentes</h2>
+      <h3>Comment est calculé le montant net ?</h3>
+      <p>Le net est <strong>estimé</strong> selon des règles fiscales simplifiées du pays choisi et dépend du type d’emploi. Les retenues réelles peuvent différer — les montants sont indicatifs.</p>
+      <h3>Où mes données sont-elles stockées ?</h3>
+      <p>Toutes les données restent <strong>sur votre appareil</strong>. Si vous activez la synchronisation iCloud, elles sont aussi conservées dans votre compte iCloud privé (Apple). Nous n’avons pas de serveurs qui traitent vos données.</p>
+      <h3>Dois-je créer un compte ou me connecter ?</h3>
+      <p>Non. L’app fonctionne sans compte et sans connexion.</p>
+      <h3>Comment récupérer mes données après réinstallation ?</h3>
+      <p>Activez la <strong>synchronisation iCloud</strong> dans les réglages. Après réinstallation (avec le même compte iCloud), l’app proposera de restaurer la sauvegarde.</p>
+      <h3>Comment supprimer toutes les données ?</h3>
+      <p>Réglages → « Supprimer mes données ». Cela efface les données de l’appareil et d’iCloud (s’il a été utilisé) et est irréversible.</p>
+      <h3>L’app contient-elle des publicités ou du suivi ?</h3>
+      <p>Non. Aucune publicité ni outil de suivi.</p>
+    </div>
 
-DELETING DATA
-• You can delete all data at any time: Settings → &quot;Delete my data&quot;. This erases the data from the device and from iCloud (if it was used).
-
-AUTHOR AND CONTACT
-• Author: Bartosz Smut
-• For privacy matters: bartek.sm90@gmail.com
-
-Last updated: 27.07.2026</article>
-<article id="lang-de" class="policy" lang="de">Datenschutzerklärung — Talvo
-
-Deine Privatsphäre ist uns wichtig. Die App ist so konzipiert, dass sie vollständig auf deinem Gerät läuft.
-
-WELCHE DATEN WIR VERARBEITEN
-• Daten zu Arbeitszeit, Sätzen, Boni, Trinkgeld, Urlaub und Dienstplan, die du selbst eingibst.
-• Die Daten werden lokal auf deinem Gerät gespeichert und, wenn du die Synchronisierung aktivierst — in deinem privaten iCloud-Konto (Apple).
-
-WAS WIR NICHT TUN
-• Wir sammeln, verkaufen oder teilen deine Daten nicht mit Dritten.
-• Wir verlangen keine Kontoerstellung oder Anmeldung.
-• Wir verwenden keine Werbung oder Tracking-Tools.
-• Wir senden deine Daten nicht an unsere Server — wir haben keine Server, die deine Daten verarbeiten.
-
-iCLOUD
-• Wenn die Synchronisierung aktiviert ist, werden die Daten in deinem iCloud-Konto gespeichert und unterliegen der Datenschutzrichtlinie von Apple. Du kannst die Synchronisierung in den App-Einstellungen deaktivieren.
-
-DATEN LÖSCHEN
-• Du kannst jederzeit alle Daten löschen: Einstellungen → „Meine Daten löschen&quot;. Dadurch werden die Daten vom Gerät und aus iCloud (falls verwendet) entfernt.
-
-AUTOR UND KONTAKT
-• Autor: Bartosz Smut
-• Für Datenschutzfragen: bartek.sm90@gmail.com
-
-Zuletzt aktualisiert: 27.07.2026</article>
-<article id="lang-it" class="policy" lang="it">Informativa sulla privacy — Talvo
-
-La tua privacy è importante per noi. L&#x27;app è progettata per funzionare interamente sul tuo dispositivo.
-
-QUALI DATI TRATTIAMO
-• Dati su orario di lavoro, tariffe, bonus, mance, ferie e turni che inserisci tu stesso.
-• I dati sono salvati localmente sul tuo dispositivo e, se attivi la sincronizzazione — nel tuo account iCloud privato (Apple).
-
-COSA NON FACCIAMO
-• Non raccogliamo, vendiamo né condividiamo i tuoi dati con terzi.
-• Non richiediamo la creazione di un account né l&#x27;accesso.
-• Non usiamo pubblicità né strumenti di tracciamento.
-• Non inviamo i tuoi dati ai nostri server — non abbiamo server che trattano i tuoi dati.
-
-iCLOUD
-• Quando la sincronizzazione è attiva, i dati sono salvati nel tuo account iCloud e sono soggetti all&#x27;informativa sulla privacy di Apple. Puoi disattivare la sincronizzazione nelle impostazioni dell&#x27;app.
-
-ELIMINAZIONE DEI DATI
-• Puoi eliminare tutti i dati in qualsiasi momento: Impostazioni → &quot;Elimina i miei dati&quot;. Questo cancella i dati dal dispositivo e da iCloud (se usato).
-
-AUTORE E CONTATTO
-• Autore: Bartosz Smut
-• Per questioni di privacy: bartek.sm90@gmail.com
-
-Ultimo aggiornamento: 27.07.2026</article>
-<article id="lang-es" class="policy" lang="es">Política de privacidad — Talvo
-
-Tu privacidad nos importa. La app está diseñada para funcionar por completo en tu dispositivo.
-
-QUÉ DATOS TRATAMOS
-• Datos sobre tiempo de trabajo, tarifas, bonos, propinas, vacaciones y horario que introduces tú mismo.
-• Los datos se guardan localmente en tu dispositivo y, si activas la sincronización — en tu cuenta privada de iCloud (Apple).
-
-QUÉ NO HACEMOS
-• No recopilamos, vendemos ni compartimos tus datos con terceros.
-• No requerimos crear una cuenta ni iniciar sesión.
-• No usamos anuncios ni herramientas de seguimiento.
-• No enviamos tus datos a nuestros servidores — no tenemos servidores que traten tus datos.
-
-iCLOUD
-• Cuando la sincronización está activada, los datos se guardan en tu cuenta de iCloud y están sujetos a la política de privacidad de Apple. Puedes desactivar la sincronización en los ajustes de la app.
-
-ELIMINACIÓN DE DATOS
-• Puedes eliminar todos los datos en cualquier momento: Ajustes → &quot;Eliminar mis datos&quot;. Esto borra los datos del dispositivo y de iCloud (si se usó).
-
-AUTOR Y CONTACTO
-• Autor: Bartosz Smut
-• Para asuntos de privacidad: bartek.sm90@gmail.com
-
-Última actualización: 27.07.2026</article>
-<article id="lang-fr" class="policy" lang="fr">Politique de confidentialité — Talvo
-
-Votre vie privée compte pour nous. L&#x27;app est conçue pour fonctionner entièrement sur votre appareil.
-
-QUELLES DONNÉES NOUS TRAITONS
-• Des données sur le temps de travail, les taux, les primes, les pourboires, les congés et le planning que vous saisissez vous-même.
-• Les données sont stockées localement sur votre appareil et, si vous activez la synchronisation — dans votre compte iCloud privé (Apple).
-
-CE QUE NOUS NE FAISONS PAS
-• Nous ne collectons, ne vendons ni ne partageons vos données avec des tiers.
-• Nous n&#x27;exigeons pas de création de compte ni de connexion.
-• Nous n&#x27;utilisons pas de publicité ni d&#x27;outils de suivi.
-• Nous n&#x27;envoyons pas vos données à nos serveurs — nous n&#x27;avons pas de serveurs qui traitent vos données.
-
-iCLOUD
-• Lorsque la synchronisation est activée, les données sont stockées dans votre compte iCloud et sont soumises à la politique de confidentialité d&#x27;Apple. Vous pouvez désactiver la synchronisation dans les réglages de l&#x27;app.
-
-SUPPRESSION DES DONNÉES
-• Vous pouvez supprimer toutes les données à tout moment : Réglages → « Supprimer mes données ». Cela efface les données de l&#x27;appareil et d&#x27;iCloud (s&#x27;il a été utilisé).
-
-AUTEUR ET CONTACT
-• Auteur : Bartosz Smut
-• Pour les questions de confidentialité : bartek.sm90@gmail.com
-
-Dernière mise à jour : 27.07.2026</article>
-    <footer>Talvo — work hours &amp; pay tracker · <a href="mailto:bartek.sm90@gmail.com">bartek.sm90@gmail.com</a></footer>
-  </div>
+    <div class="card">
+      <h2>Politique de confidentialité</h2>
+      <p>Votre vie privée compte pour nous. L’app est conçue pour fonctionner entièrement sur votre appareil.</p>
+      <h3>Quelles données nous traitons</h3>
+      <ul>
+        <li>Des données sur le temps de travail, les taux, les primes, les pourboires, les congés et le planning que vous saisissez vous-même.</li>
+        <li>Les données sont stockées localement sur votre appareil et, si vous activez la synchronisation — dans votre compte iCloud privé (Apple).</li>
+        <li>Les événements ne vont dans le Calendrier du système que si vous le demandez. L&#x27;app ne réclame qu&#x27;un accès en écriture et ne lit jamais votre calendrier.</li>
+        <li>Les relevés d&#x27;heures en PDF sont créés sur l&#x27;appareil et restent dans l&#x27;app. Ils ne partent ailleurs que si vous les partagez ou les envoyez vous-même.</li>
+        <li>Les notifications (fin de travail, pauses, rappels de tâches, jour de paie) sont locales et ne quittent pas votre appareil.</li>
+      </ul>
+      <h3>Ce que nous ne faisons pas</h3>
+      <ul>
+        <li>Nous ne collectons, ne vendons ni ne partageons vos données avec des tiers.</li>
+        <li>Nous n’exigeons pas de création de compte ni de connexion.</li>
+        <li>Nous n’utilisons pas de publicité ni d’outils de suivi.</li>
+        <li>Nous n’envoyons pas vos données à nos serveurs — nous n’avons pas de serveurs qui traitent vos données.</li>
+      </ul>
+      <h3>iCloud</h3>
+      <p>Lorsque la synchronisation est activée, les données sont stockées dans votre compte iCloud et sont soumises à la politique de confidentialité d’Apple. Vous pouvez désactiver la synchronisation dans les réglages de l’app.</p>
+      <h3>Suppression des données</h3>
+      <p>Vous pouvez supprimer toutes les données à tout moment : Réglages → « Supprimer mes données ». Cela efface les données de l’appareil et d’iCloud (s’il a été utilisé).</p>
+      <h3>Auteur &amp; contact</h3>
+      <p>Auteur : Bartosz Smut<br>Pour les questions de confidentialité : <a href="mailto:bartek.sm90@gmail.com">bartek.sm90@gmail.com</a></p>
+      <p class="muted">Dernière mise à jour : 04.10.2026</p>
+    </div>
+  </section>
+  <footer>© 2026 Bartosz Smut · Talvo</footer>
+</div>
 <script>
+  var TAGLINE = { "pl": "Czas pracy, grafik i wypłata — pomoc i prywatność", "en": "Work hours, schedule & pay — support and privacy", "de": "Arbeitszeit, Dienstplan & Lohn — Hilfe und Datenschutz", "it": "Orario di lavoro, turni e paga — assistenza e privacy", "es": "Horas de trabajo, turnos y sueldo — ayuda y privacidad", "fr": "Heures de travail, planning & paie — aide et confidentialité" };
   function show(code) {
-    document.querySelectorAll('.policy').forEach(function(el) { el.classList.toggle('active', el.id === 'lang-' + code); });
-    document.querySelectorAll('.lang').forEach(function(b) { b.classList.toggle('active', b.dataset.lang === code); });
-    try { history.replaceState(null, '', '#' + code); } catch (e) {}
+    document.querySelectorAll('.content').forEach(function(el){ el.classList.toggle('active', el.id==='lang-'+code); });
+    document.querySelectorAll('.lang').forEach(function(b){ b.classList.toggle('active', b.dataset.lang===code); });
+    document.getElementById('tagline').textContent = TAGLINE[code] || '';
+    document.documentElement.lang = code;
+    try { history.replaceState(null,'','#'+code); } catch(e){}
   }
-  var supported = ['pl','en','de','it','es','fr'];
-  var initial = (location.hash || '').replace('#','');
+  var supported = ['pl', 'en', 'de', 'it', 'es', 'fr'];
+  var initial = (location.hash||'').replace('#','');
   if (supported.indexOf(initial) < 0) {
-    var nav = (navigator.language || 'en').slice(0,2).toLowerCase();
+    var nav = (navigator.language||'en').slice(0,2).toLowerCase();
     initial = supported.indexOf(nav) >= 0 ? nav : 'en';
   }
   show(initial);
